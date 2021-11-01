@@ -8,7 +8,7 @@ const knex = require('knex')(require('./knexfile')[process.env.NODE_ENV || 'deve
 
 app.use(express.json());
 
-//Random pokemon
+//Random pokemons
 app.get('/api/random', (req, res) => {
   const randomId = Math.floor(Math.random() * 100) + 1;
   console.log(randomId)
